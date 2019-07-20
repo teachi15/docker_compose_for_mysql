@@ -1,0 +1,19 @@
+version: "3"
+services:
+  db:
+    image: mysql:5.7
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: chumon_sample
+      MYSQL_USER: cr0wd
+      MYSQL_PASSWORD: cr0wdp
+      TZ: 'Asia/Tokyo'
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    volumes:
+    - chumon_sample:/var/lib/mysql
+    ports:
+    - 3307:3306
+volumes:
+  chumon_sample:
+    driver: local
