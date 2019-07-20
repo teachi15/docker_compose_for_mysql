@@ -6,8 +6,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: chumon_sample
-      MYSQL_USER: cr0wd
-      MYSQL_PASSWORD: cr0wdp
+      MYSQL_USER: user
+      MYSQL_PASSWORD: userp
       TZ: 'Asia/Tokyo'
     command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     volumes:
